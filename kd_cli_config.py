@@ -418,14 +418,14 @@ def get_args():
     parser.add_argument("--min_decay_range_m", type=float, default=5.0,
                         help="Minimum decay-zone range (m) required for Kd fit. "
                              "Smaller values increase sensitivity but reduce reliability.")
-    parser.add_argument("--min_fit_span_m", type=float, default=2.0,
-                        help="Minimum vertical extent (m) the photon histogram must span "
-                             "before a Kd is reported; bins spanning less are returned as "
-                             "NaN with reason 'fit_span_too_short'. A decay rate cannot be "
-                             "measured over a range shorter than the window it is measured "
-                             "in: at Bohai every Kd > 1.0 came from a ~1 m span with 5 bins. "
-                             "Default 2.0 keeps 89%% of bins and cuts the maximum by 28%% "
-                             "while leaving the median unchanged. Set 0 to disable.")
+    parser.add_argument("--min_fit_span_m", type=float, default=0.0,
+                        help="Optional gate, OFF by default (0). When > 0, a bin whose "
+                             "signal (depth bins with >= 3 photons) spans less than this many "
+                             "metres is returned as NaN with reason 'fit_span_too_short'. "
+                             "Not used for the manuscript: in turbid water the signal is short "
+                             "because light is extinguished within ~2-3 m, so a 2 m gate removes "
+                             "real high-Kd plume bins (Yellow River core, Kd ~1.3 m^-1, which "
+                             "tracks OLCI Kd532 at rho = +0.89), not failed fits.")
     parser.add_argument("--min_decay_photons", type=int, default=30,
                         help="Minimum photon count in decay zone.")
     parser.add_argument("--min_decay_bins", type=int, default=8,
