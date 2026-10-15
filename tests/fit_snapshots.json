@@ -1,0 +1,128 @@
+{
+  "bma__clean_exp_decay": {
+    "bp": null,
+    "e0": 400.16276504921774,
+    "kd": 0.15079857309669478,
+    "nf": null,
+    "reason": "no_noise_floor"
+  },
+  "bma__decay_plus_noise": {
+    "bp": 9.5000001202597,
+    "e0": 813.5216510436863,
+    "kd": 0.5069500792536049,
+    "nf": 6.000000000000023,
+    "reason": null
+  },
+  "bma__increasing_counts": {
+    "bp": null,
+    "e0": null,
+    "kd": null,
+    "nf": null,
+    "reason": "no_valid_candidates"
+  },
+  "bma__insufficient_photons": {
+    "bp": null,
+    "e0": null,
+    "kd": null,
+    "nf": null,
+    "reason": "insufficient_photons"
+  },
+  "bma__many_bp_candidates": {
+    "bp": 14.79640104377069,
+    "e0": 704.3368285847193,
+    "kd": 0.30247817432222607,
+    "nf": 7.9999999999999964,
+    "reason": null
+  },
+  "bma__n_equals_6": {
+    "bp": null,
+    "e0": 246.10073372927667,
+    "kd": 0.4253909225216207,
+    "nf": null,
+    "reason": "no_noise_floor"
+  },
+  "bma__one_bp_candidate": {
+    "bp": 5.999999999999999,
+    "e0": 608.6940499857521,
+    "kd": 0.8111529997499712,
+    "nf": 4.000000000000002,
+    "reason": null
+  },
+  "bma__too_few_bins": {
+    "bp": null,
+    "e0": null,
+    "kd": null,
+    "nf": null,
+    "reason": "too_few_bins"
+  },
+  "bma__with_nan_counts": {
+    "bp": null,
+    "e0": 349.9999999999983,
+    "kd": 0.14999999999999955,
+    "nf": null,
+    "reason": "no_noise_floor"
+  },
+  "hybrid__clean_exp_decay": {
+    "bp": null,
+    "e0": 400.16276504921774,
+    "kd": 0.15079857309669478,
+    "nf": null,
+    "reason": "no_breakpoint_fallback"
+  },
+  "hybrid__decay_plus_noise": {
+    "bp": 9.5,
+    "e0": 813.5216493152876,
+    "kd": 0.506950078600867,
+    "nf": 6.0,
+    "reason": null
+  },
+  "hybrid__increasing_counts": {
+    "bp": null,
+    "e0": null,
+    "kd": null,
+    "nf": null,
+    "reason": "no_breakpoint_found"
+  },
+  "hybrid__insufficient_photons": {
+    "bp": null,
+    "e0": null,
+    "kd": null,
+    "nf": null,
+    "reason": "insufficient_photons"
+  },
+  "hybrid__many_bp_candidates": {
+    "bp": 14.75,
+    "e0": 704.2638561759001,
+    "kd": 0.30245745707327165,
+    "nf": 7.999999999999996,
+    "reason": null
+  },
+  "hybrid__n_equals_6": {
+    "bp": null,
+    "e0": 246.10073372927667,
+    "kd": 0.4253909225216207,
+    "nf": null,
+    "reason": "no_breakpoint_fallback"
+  },
+  "hybrid__one_bp_candidate": {
+    "bp": 6.0,
+    "e0": 608.6940499857521,
+    "kd": 0.8111529997499711,
+    "nf": 4.0,
+    "reason": null
+  },
+  "hybrid__too_few_bins": {
+    "bp": null,
+    "e0": null,
+    "kd": null,
+    "nf": null,
+    "reason": "too_few_bins"
+  },
+  "hybrid__with_nan_counts": {
+    "bp": null,
+    "e0": 349.9999999999983,
+    "kd": 0.14999999999999955,
+    "nf": null,
+    "reason": "no_breakpoint_fallback"
+  }
+}

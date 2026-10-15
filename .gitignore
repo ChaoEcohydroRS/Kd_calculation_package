@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+.env
+logs/
+# data and run outputs never belong in the repository
+*.h5
+*.csv
+*.parquet
+*.nc
+*.tif
+Results/
+data/
+Dataset/
+kd_utils/SolarBckgrd/Dataset/
+.order_restart
