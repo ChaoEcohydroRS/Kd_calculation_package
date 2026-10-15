@@ -153,3 +153,7 @@ tests/                  pytest suite (fit snapshots, bootstrap RNG, BIC equivale
 tools/                  post-hoc utilities
 examples/               SLURM array script used for the four paper sites
 ```
+
+## License
+
+MIT, see `LICENSE`.
