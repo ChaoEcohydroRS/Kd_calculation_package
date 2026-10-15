@@ -125,10 +125,26 @@ fields.
 
 ## Notes on provenance
 
-- The retrievals in the manuscript were produced with this code on
-  2026-08-13 with the flags above. The sea-surface flattening option
-  (`--enable_sea_surface_flattening`, Appendix C of the manuscript) was added
-  afterwards and is off by default.
+- **The manuscript retrievals were produced with this code** (commit `5d1cb63`)
+  using `examples/run_four_sites.sbatch`. The photon-cloud panels come from a
+  second run per site without the GEBCO mask
+  (`--poisson_weighted --coherent_model_selection --min_seabed_depth 3
+  --disable_histogram_quality_filter`). Checked against the original August 2026
+  run: Wax Lake Delta (a daytime pass) is bit-identical; the three night passes
+  differ only by the extra bins recovered by the September 2026 fix to night-time
+  surface detection, and by the small shift of the depth grid that follows from it
+  (next point).
+- **Known sensitivity: the depth grid is anchored to the data.** The 0.25 m depth
+  bins are laid out between the lowest and highest photon of each beam, not from
+  the sea surface, so adding or removing photons anywhere on a beam shifts every
+  bin edge by a fraction of a bin. On the night passes above this changed single-line
+  Kd by a median of 1 to 4 % per histogram, with the along-track medians unchanged.
+  Anchoring the grid to the surface would remove it.
+- `--min_fit_span_m` is an optional gate, off by default and not used for the
+  manuscript: in turbid water the signal is short because light is extinguished
+  within a few metres, so a span gate removes real high-Kd plume bins.
+- The sea-surface flattening option (`--enable_sea_surface_flattening`,
+  Appendix C of the manuscript) is off by default.
 - **Quality-flag fix, 2026-10-15.** Earlier versions keyed the quality bitmask
   by along-track bin alone, so on multi-beam runs every beam carried the last
   beam's (or the pooled) flags. K<sub>dph</sub> never read the bitmask and is
