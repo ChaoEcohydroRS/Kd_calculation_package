@@ -10,8 +10,7 @@ fits Beer's law to the exponential-decay part of each histogram, and writes one
 row per bin and beam with K<sub>dph</sub>, its bootstrap uncertainty, the fitted
 breakpoint and background floor, surface diagnostics and a quality bitmask.
 
-This is the code behind the ICESat-2 K<sub>dph</sub> manuscript (Chao Wang et al.,
-in review). It is the retrieval only; the figure and validation scripts live in
+This is the code behind the ICESat-2 K<sub>dph</sub> manuscript. It is the retrieval only; the figure and validation scripts live in
 separate project folders.
 
 ## Processing steps
